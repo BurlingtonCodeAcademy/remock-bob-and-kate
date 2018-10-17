@@ -1,7 +1,7 @@
 .wrapper-column {
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: center;  
 }
 
 .wrapper {
@@ -9,7 +9,9 @@
   flex-flow: row wrap;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
+
 
 .image {
   margin: 3%; 
@@ -19,15 +21,23 @@
   flex: 1 100%;
 }
 
+img {
+  border-radius: 4px;
+}
+
  .wrapper img {
    width: 300px;
    justify-content: center;
  }
 
  #header {
+   display: flex;
+   align-items: center;
   text-align: center;
   justify-content: center;
   border-bottom: 3px double #dddddd;
+  width: 60%;
+
  }
 
 #quote {
@@ -61,6 +71,11 @@
   margin-bottom: 5px;
 } 
 
+#header a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .sidebar div {
   border-bottom: 3px double #838383;
   padding: 20px 10px 20px 0;
@@ -69,6 +84,7 @@
 .blogpost a {
   text-decoration: none;
 }
+
 
 .blogpost {
   margin-bottom: 10px;
@@ -147,16 +163,22 @@ h3 {
   border-radius: 4px;
 }
 
-input[type=text], #message {
-  width: 45%;
-  border: 1px solid #ccc;
+input[type=text]{
   margin: 10px;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  padding: 10px;
+  display: inline-block;
+  width: 40%;
 }
 
 #message {
   height: 200px;
-  width: 95%;
+  width: 90%;
+  border: 1px solid #ccc;
+  margin: 10px;
+  border-radius: 4px;
+  padding: 10px;
 }
 
 #footer {
@@ -179,6 +201,7 @@ input[type=text], #message {
 
 .input-area {
   grid-area: form;
+  margin-right: 80px;
 }
 
 .contact-info {
@@ -190,8 +213,17 @@ ul {
   list-style-type: none;
 }
 
-li {
-  display: inline
+li div{
+  display: inline-block;
+}
+
+li p {
+  width: calc(100% - 1em);
+  float: right;
+}
+
+li img {
+  width: 16px;
 }
 
 em {
